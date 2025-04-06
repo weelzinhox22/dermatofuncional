@@ -16,7 +16,7 @@ const Hero = () => {
           </p>
           <p className="mt-4 text-sm text-gray-600 italic animate-fade-in" style={{ animationDelay: '0.3s' }}>
             Este material é apenas complementar e não substitui o material passado pela professora em aula.
-            O site e as questões foram feitas para atuar em conjunto com o material da professora.
+            O site e as questões foram feitas para atuar em conjunto com o material da professora. Recomendo que passe por todas as aulas e depois prossiga para a prova.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <a 
