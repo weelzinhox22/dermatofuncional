@@ -173,7 +173,7 @@ const Exame = () => {
       difficulty: "Médio",
       subject: "Lipólise",
       type: "open-ended",
-      keywords: ["lipogênese", "lipólise", "armazenamento", "energia", "triglicerídeos", "adipócitos", "quebra", "ácidos graxos", "glicerol", "combustível"]
+      keywords: ["lipogênese", "lipólise", "armazenamento", "energia", "triglicerídeos", "adipócitos", "quebra", "ácidos graxos", "glicerol", "combustível", "liberação", "liberacao"]
     },
     {
       id: 9,
