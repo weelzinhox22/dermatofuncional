@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -583,21 +582,6 @@ const Exame = () => {
     },
     {
       id: 36,
-      text: "Qual a pressão negativa adequada para o tratamento de estrias na Vacuoterapia?",
-      options: [
-        "-100 mmHg a -200 mmHg",
-        "-200 mmHg a -300 mmHg",
-        "-300 mmHg a -600 mmHg",
-        "-600 mmHg a -900 mmHg"
-      ],
-      correctAnswer: 2,
-      explanation: "Para o tratamento de estrias com Vacuoterapia, a pressão negativa adequada varia de -300 mmHg a -600 mmHg.",
-      difficulty: "Médio",
-      subject: "Eletroterapia",
-      type: "multiple-choice"
-    },
-    {
-      id: 37,
       text: "O que é o Peeling de Diamante e como ele funciona?",
       options: [
         "Um tratamento químico que remove as camadas superiores da pele",
@@ -612,7 +596,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 38,
+      id: 37,
       text: "Quais são os tipos de camadas na epiderme, do mais superficial para o mais profundo?",
       options: [
         "Córnea, granulosa, espinhosa, lúcida, basal",
@@ -627,7 +611,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 39,
+      id: 38,
       text: "Qual processo está associado à descamação e renovação da pele?",
       options: [
         "Melanogênese",
@@ -642,7 +626,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 40,
+      id: 39,
       text: "Qual componente da derme é responsável por conferir elasticidade à pele?",
       options: [
         "Colágeno",
@@ -657,7 +641,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 41,
+      id: 40,
       text: "Qual é a composição do manto hidrolipídico e qual sua função?",
       options: [
         "Água e proteínas; proteger contra infecções",
@@ -672,7 +656,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 42,
+      id: 41,
       text: "Quais fatores podem afetar a saúde da pele?",
       options: [
         "Apenas fatores genéticos",
@@ -687,7 +671,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 43,
+      id: 42,
       text: "O que são discromias?",
       options: [
         "Alterações na textura da pele",
@@ -702,7 +686,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 44,
+      id: 43,
       text: "Em qual camada da pele os melanócitos são encontrados?",
       options: [
         "Camada córnea",
@@ -717,7 +701,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 45,
+      id: 44,
       text: "Qual a diferença entre hipoderme e derme?",
       options: [
         "Não há diferença, são sinônimos",
@@ -732,7 +716,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 46,
+      id: 45,
       text: "Como o tecido adiposo da hipoderme funciona no corpo?",
       options: [
         "Apenas como reserva energética",
@@ -747,7 +731,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 47,
+      id: 46,
       text: "Qual a função principal das glândulas sebáceas na pele?",
       options: [
         "Produzir suor para regular a temperatura corporal",
@@ -762,7 +746,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 48,
+      id: 47,
       text: "Qual a causa da desidratação da pele oleosa?",
       options: [
         "Excesso de produção de sebo",
@@ -777,7 +761,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 49,
+      id: 48,
       text: "Como os pigmentos contribuem para a cor da pele?",
       options: [
         "Apenas a melanina determina a cor da pele",
@@ -792,7 +776,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 50,
+      id: 49,
       text: "Qual a relação entre as células de Langerhans e o sistema imunológico da pele?",
       options: [
         "Células de Langerhans produzem queratina para proteger a pele",
@@ -807,7 +791,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 51,
+      id: 50,
       text: "Como funciona a termorregulação na pele?",
       options: [
         "Apenas através da vasoconstrição em ambientes frios",
@@ -822,7 +806,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 52,
+      id: 51,
       text: "Quais são os dois tipos principais de envelhecimento cutâneo?",
       options: [
         "Exógeno e endógeno",
@@ -837,7 +821,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 53,
+      id: 52,
       text: "Quais alterações ocorrem nas fibras colágenas durante o envelhecimento cutâneo?",
       options: [
         "Aumento da elasticidade",
@@ -852,7 +836,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 54,
+      id: 53,
       text: "Qual dos seguintes NÃO é um fator que acelera o envelhecimento cutâneo?",
       options: [
         "Radiação UV",
@@ -867,7 +851,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 55,
+      id: 54,
       text: "O que é sarcopenia?",
       options: [
         "Acúmulo excessivo de gordura no tecido muscular",
@@ -882,7 +866,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 56,
+      id: 55,
       text: "O que são radicais livres e qual sua relação com o envelhecimento?",
       options: [
         "Moléculas estáveis que protegem as células do envelhecimento",
@@ -897,7 +881,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 57,
+      id: 56,
       text: "Qual das seguintes não é uma ação da radiofrequência no tratamento do envelhecimento cutâneo?",
       options: [
         "Estimulação da contração das fibras de colágeno existentes",
@@ -912,7 +896,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 58,
+      id: 57,
       text: "Qual temperatura deve ser atingida durante o tratamento com radiofrequência para estimular a neocolagênese e tratar a flacidez?",
       options: [
         "32°C a 35°C",
@@ -927,7 +911,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 59,
+      id: 58,
       text: "O que é a microcorrente e como ela atua no envelhecimento cutâneo?",
       options: [
         "Uma corrente de alta frequência que causa aquecimento profundo e estimula o colágeno",
@@ -942,7 +926,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 60,
+      id: 59,
       text: "Qual nutriente é um precursor da colina e pode estimular os músculos, melhorando o tônus da pele?",
       options: [
         "Vitamina E",
@@ -957,7 +941,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 61,
+      id: 60,
       text: "Quais são os quatro pigmentos que contribuem para a coloração da pele?",
       correctAnswerText: "Melanina, carotenos, hemoglobinas oxigenadas e hemoglobinas reduzidas",
       explanation: "A coloração da pele é resultado da interação de quatro pigmentos naturais: melanina (marrom), carotenos (amarelo), hemoglobinas oxigenadas presentes nos capilares (vermelha) e hemoglobinas reduzidas presentes nas vênulas (azulada).",
@@ -967,7 +951,7 @@ const Exame = () => {
       keywords: ["melanina", "carotenos", "hemoglobinas oxigenadas", "hemoglobinas reduzidas", "pigmentos", "marrom", "amarelo", "vermelha", "azulada"]
     },
     {
-      id: 62,
+      id: 61,
       text: "Quais são os três tipos principais de discromias?",
       options: [
         "Hipertensão, hipotensão e normotensão",
@@ -982,7 +966,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 63,
+      id: 62,
       text: "O que é melasma?",
       options: [
         "Uma infecção fúngica da pele",
@@ -997,7 +981,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 64,
+      id: 63,
       text: "Qual a função da enzima tirosinase na pigmentação da pele?",
       options: [
         "Degradar a melanina existente",
@@ -1012,7 +996,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 65,
+      id: 64,
       text: "Qual dos seguintes ativos despigmentantes atua inibindo a tirosinase sem causar fotossensibilização?",
       options: [
         "Hidroquinona",
@@ -1027,7 +1011,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 66,
+      id: 65,
       text: "Por que o uso de fotoproteção é fundamental durante e após tratamentos despigmentantes?",
       options: [
         "Para evitar a desidratação da pele",
@@ -1042,7 +1026,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 67,
+      id: 66,
       text: "Como a niacinamida (vitamina B3) atua no tratamento das discromias?",
       options: [
         "Destruindo os melanócitos",
@@ -1057,7 +1041,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 68,
+      id: 67,
       text: "Quais fototipos têm maior tendência a desenvolver hiperpigmentação pós-inflamatória?",
       options: [
         "Fototipos I e II (pele muito clara)",
@@ -1072,7 +1056,7 @@ const Exame = () => {
       type: "multiple-choice"
     },
     {
-      id: 69,
+      id: 68,
       text: "O que é a Classificação de Fitzpatrick e qual sua importância na abordagem das discromias?",
       correctAnswerText: "A Classificação de Fitzpatrick é um sistema que classifica a pele em seis fototipos com base na reatividade à luz solar. É importante no tratamento das discromias porque permite personalizar o tratamento conforme a sensibilidade e risco de hiperpigmentação de cada tipo de pele.",
       explanation: "A Classificação de Fitzpatrick é um sistema que categoriza a pele em seis fototipos (I a VI) de acordo com sua reatividade à luz solar e formação de eritema. Esta classificação é fundamental no tratamento das discromias, pois permite adaptar o protocolo de tratamento às necessidades específicas de cada tipo de pele, considerando fatores como risco de hiperpigmentação pós-inflamatória e sensibilidade a diferentes ativos despigmentantes.",
@@ -1082,7 +1066,7 @@ const Exame = () => {
       keywords: ["classificação", "fitzpatrick", "fototipos", "reatividade", "luz solar", "tratamento", "personalizado", "hiperpigmentação", "sensibilidade", "eritema"]
     },
     {
-      id: 70,
+      id: 69,
       text: "Qual é a importância da hidratação no tratamento das discromias?",
       options: [
         "Apenas para melhorar o conforto do paciente",
@@ -1306,7 +1290,7 @@ const Exame = () => {
             <div className="text-center mb-8">
               <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Prova Online de Fisioterapia Dermatofuncional</h1>
               <p className="text-gray-600 mb-2">Teste seus conhecimentos em Anatomia da Pele, Lipólise, Sistema Linfático, Eletroterapia, Envelhecimento e Discromias</p>
-              <p className="text-gray-600">70 questões | 90 minutos | Diferentes níveis de dificuldade</p>
+              <p className="text-gray-600">69 questões | 90 minutos | Diferentes níveis de dificuldade</p>
             </div>
 
             <div className="space-y-6">
@@ -1316,7 +1300,7 @@ const Exame = () => {
                   Instruções:
                 </h2>
                 <ul className="list-disc pl-5 space-y-2 text-blue-800">
-                  <li>O exame consiste em 70 questões, incluindo questões de múltipla escolha e questões abertas.</li>
+                  <li>O exame consiste em 69 questões, incluindo questões de múltipla escolha e questões abertas.</li>
                   <li>Você terá 90 minutos para completar o exame.</li>
                   <li>Você não pode sair da página durante o exame - isso encerrará a prova automaticamente.</li>
                   <li>É necessário responder cada questão de múltipla escolha antes de avançar para a próxima.</li>
