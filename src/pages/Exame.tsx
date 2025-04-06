@@ -1362,7 +1362,7 @@ const Exame = () => {
                       </RadioGroup>
                     ) : (
                       <div className="space-y-3">
-                        <p className="text-sm text-gray-500 mb-2">Digite sua resposta na área abaixo. Tente incluir os principais conceitos relacionados à questão.</p>
+                        <p className="text-sm text-gray-500 mb-2">Digite sua resposta na área abaixo. Tente incluir os principais conceitos relacionados à questão. A pontuação será baseada na presença de palavras-chave referentes ao conteúdo da questão, quanto mais palavras-chave, maior a pontuação.</p>
                         <Textarea 
                           value={openEndedAnswers[currentQuestionIndex] || ''} 
                           onChange={(e) => handleOpenEndedAnswerChange(e.target.value)}
