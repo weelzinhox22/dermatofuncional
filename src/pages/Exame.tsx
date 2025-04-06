@@ -948,7 +948,7 @@ const Exame = () => {
       difficulty: "Médio",
       subject: "Discromias",
       type: "open-ended",
-      keywords: ["melanina", "carotenos", "hemoglobinas oxigenadas", "hemoglobinas reduzidas", "pigmentos", "marrom", "amarelo", "vermelha", "azulada"]
+      keywords: ["melanina", "carotenos", "caroteno", "hemoglobinas oxigenadas", "hemoglobina oxigenada", "hemoglobina reduzida", "hemoglobinas reduzidas", "pigmentos", "marrom", "amarelo", "vermelha", "azulada"]
     },
     {
       id: 61,
