@@ -12,7 +12,7 @@ import Exame from "./pages/Exame";
 import Envelhecimento from "./pages/Envelhecimento";
 import Discromias from "./pages/Discromias";
 import NotFound from "./pages/NotFound";
-
+import Atividade from "./pages/Atividade";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -29,6 +29,7 @@ const App = () => (
           <Route path="/exame" element={<Exame />} />
           <Route path="/envelhecimento" element={<Envelhecimento />} />
           <Route path="/discromias" element={<Discromias />} />
+          <Route path="/atividade" element={<Atividade />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

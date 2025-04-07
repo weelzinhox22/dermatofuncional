@@ -73,6 +73,12 @@ const Hero = () => {
             >
               Prova Online
             </Link>
+            <Link 
+              to="/atividade" 
+              className="px-6 py-3 bg-primary/90 text-white font-medium rounded-md hover:bg-primary/80 transition-colors shadow-sm"
+            >
+              Resposta da Atividade
+            </Link>
           </div>
         </div>
       </div>
