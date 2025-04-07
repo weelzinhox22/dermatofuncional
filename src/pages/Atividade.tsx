@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContentSection from '@/components/ContentSection';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ChevronDown, ChevronUp, BookOpen, Brain, Activity } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ChevronUp, BookOpen, Brain, Activity, Zap, Palette } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Accordion,
@@ -78,25 +78,64 @@ const questions = [
     }
   ];
 
-const QuestionCard = ({ question, answer, index }) => {
+// Category styling configurations
+const categoryStyles = {
+  fundamentos: {
+    color: "text-blue-600",
+    bg: "bg-blue-50",
+    border: "border-blue-200",
+    iconBg: "bg-blue-100",
+    hoverBg: "hover:bg-blue-100"
+  },
+  tecnicas: {
+    color: "text-green-600",
+    bg: "bg-green-50",
+    border: "border-green-200",
+    iconBg: "bg-green-100",
+    hoverBg: "hover:bg-green-100"
+  },
+  patologias: {
+    color: "text-purple-600",
+    bg: "bg-purple-50",
+    border: "border-purple-200",
+    iconBg: "bg-purple-100",
+    hoverBg: "hover:bg-purple-100"
+  },
+  all: {
+    color: "text-amber-600",
+    bg: "bg-amber-50",
+    border: "border-amber-200",
+    iconBg: "bg-amber-100",
+    hoverBg: "hover:bg-amber-100"
+  }
+};
+
+const QuestionCard = ({ question, answer, index, category }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const styles = categoryStyles[category] || categoryStyles.all;
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="mb-4"
+      className="mb-6"
     >
-      <Card className="overflow-hidden border-l-4 hover:shadow-lg transition-all duration-300"
-            style={{ borderLeftColor: isOpen ? 'var(--primary)' : 'var(--muted)' }}>
+      <Card className={`overflow-hidden border ${styles.border} ${styles.hoverBg} hover:shadow-md transition-all duration-300`}>
         <CardContent className="p-0">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="w-full p-6 text-left flex justify-between items-center focus:outline-none"
+            className="w-full p-6 text-left flex items-start gap-4 focus:outline-none"
           >
-            <h3 className="text-xl font-semibold">{question}</h3>
-            <div className="text-primary">
+            <div className={`flex-shrink-0 w-10 h-10 rounded-full ${styles.iconBg} ${styles.color} flex items-center justify-center mt-1`}>
+              {category === "fundamentos" && <Brain size={20} />}
+              {category === "tecnicas" && <Activity size={20} />}
+              {category === "patologias" && <Palette size={20} />}
+            </div>
+            <div className="flex-grow">
+              <h3 className="text-lg font-medium text-gray-800">{question}</h3>
+            </div>
+            <div className={`flex-shrink-0 ${styles.color} mt-1`}>
               {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </div>
           </button>
@@ -108,9 +147,9 @@ const QuestionCard = ({ question, answer, index }) => {
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="px-6 pb-6 border-t"
+                className={`px-6 pb-6 pt-0 border-t ${styles.border}`}
               >
-                <div className="pt-4 whitespace-pre-line">{answer}</div>
+                <div className="pt-4 whitespace-pre-line text-gray-700">{answer}</div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -125,7 +164,7 @@ const Atividade = () => {
     { id: "all", label: "Todas", icon: <BookOpen className="h-4 w-4" /> },
     { id: "fundamentos", label: "Fundamentos", icon: <Brain className="h-4 w-4" /> },
     { id: "tecnicas", label: "Técnicas", icon: <Activity className="h-4 w-4" /> },
-    { id: "patologias", label: "Patologias", icon: <Activity className="h-4 w-4" /> }
+    { id: "patologias", label: "Patologias", icon: <Palette className="h-4 w-4" /> }
   ];
   
   const [activeCategory, setActiveCategory] = useState("all");
@@ -135,10 +174,10 @@ const Atividade = () => {
     : questions.filter(q => q.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Navbar />
       
-      <main className="container mx-auto px-4 py-6 md:py-12">
+      <main className="container mx-auto px-4 py-8 md:py-12 max-w-6xl">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -157,56 +196,63 @@ const Atividade = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl font-bold text-primary mb-8 font-serif"
+          className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
         >
           Atividade Pontuada
         </motion.h1>
+        
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-gray-600 mb-8 max-w-3xl"
+        >
+          Esta seção contém as respostas de uma das atividades passadas em aula pela professora. Selecione uma categoria para filtrar as perguntas.
+        </motion.p>
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white shadow-md rounded-lg overflow-hidden mb-8"
+          className="mb-8"
         >
           <ContentSection 
             id="atividades-pontuadas"
+            title="Perguntas e Respostas"
             className="content-section prose max-w-none"
           >
-            <div className="bg-gradient-to-r from-primary/10 to-transparent p-6 rounded-lg mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-4">Perguntas e Respostas</h2>
-              <p className="text-gray-700">
-                Esta seção contém as respostas de uma das atividades passadas em aula pela professora.
-              </p>
-            </div>
-
-            <Tabs defaultValue="all" className="w-full mb-8">
-              <TabsList className="w-full justify-start mb-6 bg-muted/20 p-1 overflow-x-auto flex-nowrap">
-                {categories.map(cat => (
-                  <TabsTrigger 
-                    key={cat.id} 
-                    value={cat.id}
+            {/* Category filter pills */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              {categories.map(cat => {
+                const styles = categoryStyles[cat.id];
+                const isActive = activeCategory === cat.id;
+                
+                return (
+                  <button
+                    key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className="flex items-center gap-2"
+                    className={`px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300
+                      ${isActive ? `${styles.bg} ${styles.color} font-medium` : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
                   >
                     {cat.icon}
                     {cat.label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-              
-              <TabsContent value={activeCategory} className="mt-0">
-                <div className="space-y-4">
-                  {filteredQuestions.map((q, index) => (
-                    <QuestionCard 
-                      key={q.id}
-                      question={q.question}
-                      answer={q.answer}
-                      index={index}
-                    />
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+                  </button>
+                );
+              })}
+            </div>
+            
+            {/* Questions list */}
+            <div className="space-y-4">
+              {filteredQuestions.map((q, index) => (
+                <QuestionCard 
+                  key={q.id}
+                  question={q.question}
+                  answer={q.answer}
+                  category={q.category}
+                  index={index}
+                />
+              ))}
+            </div>
           </ContentSection>
         </motion.div>
       </main>
